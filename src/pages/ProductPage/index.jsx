@@ -35,9 +35,7 @@ const ProductsPage = () => {
             <div className="col-lg-9">
               <ProductToolbox {...toolboxProps} />
               <ProductList {...productListProps} />
-              {productListProps.products > 0 && (
-                <Pagination {...paginationProps} />
-              )}
+              {productListProps.products && <Pagination {...paginationProps} />}
             </div>
             <ProductFilter {...filterProps} />
           </div>
